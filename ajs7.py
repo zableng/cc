@@ -1,26 +1,20 @@
 # -*- coding: utf-8 -*- 
-import siliwangi
-from siliwangi import *
-from akad.ttypes import *
-from thrift.unverting import *
-from thrift.TMultiplexedProcessor import *
-from thrift.TSerialization import *
-from thrift.TRecursive import *
-from thrift import transport, protocol, server
+from lineX import *
 from multiprocessing import Pool, Process
-from humanfriendly import format_timespan, format_size, format_number, format_length
-from time import sleep
-import time, random, sys, json, codecs, threading, glob, re, string, os, requests, subprocess, six, ast, pytz, urllib.request, urllib.parse, urllib.error, urllib.parse
-from datetime import timedelta, date
+from thrift.protocol import TCompactProtocol
+from thrift.transport import THttpClient
+from akad.ttypes import LoginRequest
+from akad import LineService
+import json, requests
 from datetime import datetime
-from gtts import gTTS
-import html5lib,shutil
-import wikipedia,goslate
-import ffmpy
+import time,random,sys,json,codecs,threading,glob,re,os,subprocess,asyncio
+from datetime import datetime, timedelta
+from time import sleep
 from bs4 import BeautifulSoup
+from humanfriendly import format_timespan, format_size, format_number, format_length
+import pytz, time, random, sys, json, codecs, threading, glob, re, string, os, requests, subprocess, six, ast, urllib, urllib.parse,youtube_dl,pafy,timeit,atexit,traceback,ffmpy,humanize
 from googletrans import Translator
-import youtube_dl
-import pyimgflip
+
              #﹦﹦﹦﹦﹦﹦﹦ɢᴜɴᴀᴋᴀɴ ᴅᴇɴɢᴀɴ ʙɪᴊᴀᴋ﹦﹦﹦﹦﹦﹦﹦#
 #======sɪʟᴀʜᴋᴀɴ ᴋᴇᴍʙᴀɴɢɪɴ ʟᴀɢɪ sᴄʀɪᴩᴛ ɴʏᴀ======#
 
